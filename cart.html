@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Корзина</title>
+  <link rel="stylesheet" href="./css/style.css">
+  <style>
+    body { background:#0b0d10; color:#fff; font-family:"Inter",sans-serif; margin:0; }
+    .header { display:flex; justify-content:space-between; align-items:center; padding:16px 24px; background:#11161b; }
+    .logo { font-size:20px; font-weight:700; }
+    .cart-btn { background:#1e2630; padding:8px 14px; border-radius:8px; color:#fff; text-decoration:none; font-size:14px; }
+    .cart-page { width:min(1000px,92%); margin:20px auto; display:flex; flex-direction:column; gap:16px; }
+    .cart-card { display:flex; align-items:center; gap:16px; background:#161c22; border:1px solid rgba(255,255,255,0.08); border-radius:12px; padding:12px; }
+    .cart-card .img { width:90px; height:90px; border-radius:10px; overflow:hidden; flex-shrink:0; background:#1a1f27; display:flex; align-items:center; justify-content:center; }
+    .cart-card .img img { width:100%; height:100%; object-fit:cover; }
+    .cart-card .content { flex:1; display:flex; flex-direction:column; gap:6px; }
+    .cart-card .title { margin:0; font-size:15px; font-weight:600; }
+    .cart-card .price { font-size:14px; color:#8ea0b4; }
+    .btn { padding:6px 12px; border-radius:6px; border:none; cursor:pointer; font-size:13px; }
+    .btn.danger { background:#b91c1c; color:#fff; }
+    .btn.danger:hover { background:#dc2626; }
+    .checkout { margin-top:20px; text-align:right; }
+    .checkout-btn { padding:10px 20px; border-radius:8px; background:#22c55e; color:#fff; text-decoration:none; font-weight:600; }
+    .qty-control {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 6px 0;
+}
+
+.qty-control .btn {
+  background:#1e2630;
+  color:#fff;
+  border:none;
+  padding:4px 10px;
+  border-radius:6px;
+  cursor:pointer;
+  font-size:16px;
+  line-height:1;
+}
+
+.qty-control span {
+  min-width: 24px;
+  text-align: center;
+  font-weight: 600;
+}
+
+  </style>
+</head>
+<body>
+  <header class="header">
+    <h1 class="logo">Корзина</h1>
+    <a href="home.html" class="cart-btn">Назад в магазин</a>
+  </header>
+
+  <main class="cart-page">
+    <div id="cart-items"></div>
+    <div class="checkout">
+      <h3>Итого: <span id="total">0</span> ₸</h3>
+      <a href="checkout.html" class="checkout-btn">Перейти к оплате</a>
+    </div>
+  </main>
+
+  <script src="./js/cart.js"></script>
+</body>
+</html>

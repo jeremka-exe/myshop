@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Оплата заказа</title>
+  <style>
+    :root {
+      --bg:#0b0d10;
+      --panel:#12161b;
+      --text:#e6edf3;
+      --muted:#8ea0b4;
+      --accent:#52a8ff;
+      --success:#22c55e;
+    }
+    * {box-sizing:border-box; margin:0; padding:0;}
+    html,body {height:100%;}
+    body {
+      margin:0; 
+      background: radial-gradient(1200px 600px at 10% -10%, #0f1320 0%, var(--bg) 60%),
+                 radial-gradient(900px 500px at 110% 10%, #0d1724 0%, transparent 60%),
+                 var(--bg);
+      color:var(--text); 
+      font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      display:grid; 
+      place-items:center;
+      padding:20px;
+    }
+
+    .card {
+      width:min(500px, 92vw);
+      background:var(--panel); 
+      border:1px solid rgba(255,255,255,0.1);
+      border-radius:18px; 
+      padding:28px; 
+    }
+
+    .card h1 {
+      margin-bottom:20px;
+      text-align:center;
+    }
+
+    form {
+      display:flex;
+      flex-direction:column;
+      gap:16px;
+    }
+
+    label {
+      font-size:14px;
+      color:var(--muted);
+      margin-bottom:4px;
+      display:block;
+    }
+
+    input {
+      width:100%;
+      padding:10px;
+      border-radius:8px;
+      border:1px solid rgba(255,255,255,0.1);
+      background:#1a1f27;
+      color:var(--text);
+      font-size:15px;
+    }
+
+    input:focus {
+      border-color: var(--accent);
+      outline: none;
+    }
+
+    .row {
+      display:flex;
+      gap:12px;
+    }
+    .row > div {flex:1;}
+
+    .btn {
+      padding:12px;
+      border:none;
+      border-radius:8px;
+      background:var(--accent);
+      color:#fff;
+      font-size:15px;
+      font-weight:600;
+      cursor:pointer;
+      transition:background 0.2s ease;
+      margin-top:10px;
+    }
+    .btn:hover { background:#1d8fe5; }
+
+    .success {
+      margin-top:15px;
+      padding:12px;
+      text-align:center;
+      border-radius:8px;
+      background:var(--success);
+      color:#fff;
+      font-weight:600;
+      display:none;
+    }
+
+    .back-link {
+      display:block;
+      margin-top:20px;
+      text-align:center;
+      color:var(--accent);
+      text-decoration:none;
+      font-size:14px;
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h1>Оплата заказа</h1>
+    <form id="payment-form">
+      <div>
+        <label for="card-number">Номер карты</label>
+        <input type="text" id="card-number" maxlength="19" placeholder="0000 0000 0000 0000" required>
+      </div>
+      <div class="row">
+        <div>
+          <label for="expiry">Срок действия</label>
+          <input type="text" id="expiry" maxlength="5" placeholder="MM/YY" required>
+        </div>
+        <div>
+          <label for="cvv">CVV</label>
+          <input type="password" id="cvv" maxlength="3" placeholder="***" required>
+        </div>
+      </div>
+      <div>
+        <label for="name">Имя владельца карты</label>
+        <input type="text" id="name" placeholder="IVAN IVANOV" required>
+      </div>
+      <button type="submit" class="btn">Оформить заказ</button>
+    </form>
+    <div id="success-message" class="success">✅ Заказ успешно оформлен!</div>
+    <a href="home.html" class="back-link">← Вернуться в магазин</a>
+  </div>
+
+  <script>
+    const form = document.getElementById('payment-form');
+    const success = document.getElementById('success-message');
+
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+      success.style.display = 'block';
+      form.reset();
+    });
+  </script>
+</body>
+</html>

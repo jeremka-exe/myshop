@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Dindon-Shop</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+  <header>
+  <div class="container nav">
+    <div class="brand">Dindon<span class="dot">-</span>Shop</div>
+    <nav class="menu">
+       <a href="#home">Главная</a>
+      <a href="#catalog">Каталог</a>
+      <a href="#contacts">Контакты</a>
+      <a href="cart.html" class="cart-link">Корзина</a>
+    </nav>
+  </div>
+</header>
+
+  <main class="container" id="home">
+    <section class="hero">
+      <h1>Магазин всего на свете</h1>
+      <p>ну не прям всего</p>
+    </section>
+
+     <!-- Поиск -->
+  <div class="search-box">
+    <input type="text" id="searchInput" placeholder="Поиск товаров...">
+  </div>
+
+  <!-- Сетка карточек -->
+  <section class="grid" id="catalog">
+    <!-- твои товары остаются без изменений -->
+  </section>
+
+  <!-- Сообщение, если нет результатов -->
+  <p id="noResults" style="display:none; text-align:center; margin-top:20px; font-weight:600;">
+    Товар не найден
+  </p>
+
+    <section class="grid">
+      <!-- 1 -->
+      <article class="card">
+        <div class="img">
+          <img src="./img/airpds (1).png" alt="AirPods Max">
+        </div>
+        <div class="content">
+          <div class="title">Наушники AirPods Max</div>
+          <div class="price">490.000₸</div>
+          <button class="btn add-to-cart"
+            data-id="p1"
+            data-name="Наушники AirPods Max"
+            data-price="490000"
+            data-img="./img/airpds (1).png">Добавить в корзину</button>
+        </div>
+      </article>
+
+      <!-- 2 -->
+      <article class="card">
+        <div class="img">
+          <img src="./img/imgmain_98dd3e1dbf4c4423a6624a6d.jpg" alt="Смарт-часы Lite">
+        </div>
+        <div class="content">
+          <div class="title">Смарт-часы Lite</div>
+          <div class="price">249.000₸</div>
+          <button class="btn add-to-cart"
+            data-id="p2"
+            data-name="Смарт-часы Lite"
+            data-price="249000"
+            data-img="./img/imgmain_98dd3e1dbf4c4423a6624a6d.jpg">Добавить в корзину</button>
+        </div>
+      </article>
+
+      <!-- 3 -->
+      <article class="card">
+        <div class="img">
+          <img src="https://i.pinimg.com/736x/b7/8d/80/b78d80331755f873953e5c23f33b4ed7.jpg" alt="JBL">
+        </div>
+        <div class="content">
+          <div class="title">Портативная колонка JBL</div>
+          <div class="price">39.900₸</div>
+          <button class="btn add-to-cart"
+            data-id="p3"
+            data-name="Портативная колонка JBL"
+            data-price="39900"
+            data-img="https://i.pinimg.com/736x/b7/8d/80/b78d80331755f873953e5c23f33b4ed7.jpg">Добавить в корзину</button>
+        </div>
+      </article>
+
+      <!-- 4 -->
+      <article class="card">
+        <div class="img">
+          <img src="https://assets-prd.ignimgs.com/2022/03/11/backpack-1-1647017597932.jpg" alt="Рюкзак">
+        </div>
+        <div class="content">
+          <div class="title">Рюкзак для ноутбука</div>
+          <div class="price">4990₸</div>
+          <button class="btn add-to-cart"
+            data-id="p4"
+            data-name="Рюкзак для ноутбука"
+            data-price="4990"
+            data-img="https://assets-prd.ignimgs.com/2022/03/11/backpack-1-1647017597932.jpg">Добавить в корзину</button>
+        </div>
+      </article>
+
+      <!-- 5 -->
+      <article class="card">
+        <div class="img">
+          <img src="./img/koils (1).jpg" alt="Койловеры">
+        </div>
+        <div class="content">
+          <div class="title">Койловеры на BMW M3 E92</div>
+          <div class="price">2.599.000₸</div>
+          <button class="btn add-to-cart"
+            data-id="p5"
+            data-name="Койловеры на BMW M3 E92"
+            data-price="2599000"
+            data-img="./img/koils (1).jpg">Добавить в корзину</button>
+        </div>
+      </article>
+
+      <!-- 6 -->
+      <article class="card">
+        <div class="img">
+          <img src="https://cdn.rbt.ru/images/gen/item_image/image/10479/24/1047846_r514.jpg" alt="Браслет">
+        </div>
+        <div class="content">
+          <div class="title">Фитнес-браслет Pulse</div>
+          <div class="price">29.990₸</div>
+          <button class="btn add-to-cart"
+            data-id="p6"
+            data-name="Фитнес-браслет Pulse"
+            data-price="29990"
+            data-img="https://cdn.rbt.ru/images/gen/item_image/image/10479/24/1047846_r514.jpg">Добавить в корзину</button>
+        </div>
+      </article>
+
+      <!-- 7 -->
+      <article class="card">
+        <div class="img">
+          <img src="https://www.rbc.ua/static/ckef2/img/photo_2024-02-04_21-00-42-2-kopiya_1707114815_1.jpg" alt="Iphone">
+        </div>
+        <div class="content">
+          <div class="title">Iphone 16 Plus 128GB</div>
+          <div class="price">549.000₸</div>
+          <button class="btn add-to-cart"
+            data-id="p7"
+            data-name="Iphone 16 Plus 128GB"
+            data-price="549000"
+            data-img="https://www.rbc.ua/static/ckef2/img/photo_2024-02-04_21-00-42-2-kopiya_1707114815_1.jpg">Добавить в корзину</button>
+        </div>
+      </article>
+
+      <!-- 8 -->
+      <article class="card">
+        <div class="img">
+          <img src="./img/eb7fca89-6c8b-4e80-a3dd-158f3984a8cd.jpg" alt="Имран">
+        </div>
+        <div class="content">
+          <div class="title">Саутов Имран</div>
+          <div class="price">Даром в хорошие руки</div>
+          <button class="btn add-to-cart"
+            data-id="p8"
+            data-name="Саутов Имран"
+            data-price="0"
+            data-img="./img/eb7fca89-6c8b-4e80-a3dd-158f3984a8cd.jpg">Добавить в корзину</button>
+        </div>
+      </article>
+    </section>
+  </main>
+
+  <footer class="footer" id="contacts"> 
+    <div class="footer-content"> 
+      <div class="contacts"> 
+        <h3>Контакты</h3> 
+        <p>📍 Адрес: г. Алматы, пр. Абая, 53</p> 
+        <p>📞 Телефон: +7 (707) 466-24-57</p> 
+        <p>✉ Email: dindonshop@gmail.com</p> 
+      </div> <div class="map"> 
+        <h3>Мы на карте</h3>
+         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2923.198028059682!2d76.91371679306032!3d43.238231175282564!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38836ebc52d8b4fb%3A0xb0baf7e79c3e8e5a!2z0J_QsNGA0Log0JrQsNC70YzQutCw!5e0!3m2!1sru!2skz!4v1700000000000!5m2!1sru!2skz" width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"> </iframe> </div> </div> <p class="copy">© 2025 Dindon-Shop</p> 
+  </footer>
+
+  <script src="./js/cart.js"></script>
+
+  <script>
+  const searchInput = document.getElementById("searchInput");
+  const cards = document.querySelectorAll(".card");
+  const noResults = document.getElementById("noResults");
+
+  searchInput.addEventListener("input", function () {
+    const value = this.value.toLowerCase().trim();
+    let found = false;
+
+    cards.forEach(card => {
+      const title = card.querySelector(".title").textContent.toLowerCase();
+      if (title.includes(value)) {
+        card.style.display = "block";
+        found = true;
+      } else {
+        card.style.display = "none";
+      }
+    });
+
+    noResults.style.display = found ? "none" : "block";
+  });
+</script>
+
+</body>
+</html>
